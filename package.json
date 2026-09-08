@@ -1,0 +1,6 @@
+{
+  "name": "somn-studio-dashboard-vercel",
+  "version": "1.0.0",
+  "description": "SOMN Studio OS dashboard with password-only login (Vercel deployment)",
+  "private": true
+}

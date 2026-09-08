@@ -1,0 +1,254 @@
+<div class="flex flex-col w-full h-full min-h-[calc(100vh-3.5rem)] relative overflow-hidden">
+<!-- Subtle Background Gradient for Depth -->
+<div class="absolute inset-0 pointer-events-none opacity-30 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-colors-status-review)_0%,_transparent_50%)]"></div>
+<!-- Header Section -->
+<div class="relative z-10 px-lg py-lg border-b border-border-subtle bg-surface-container-lowest/80 backdrop-blur-md">
+<div class="flex items-start justify-between gap-xl">
+<!-- Title & Metadata -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-sm mb-md">
+<div class="bg-status-review/10 border border-status-review/30 px-xs py-[2px] rounded flex items-center gap-xs">
+<div class="w-1.5 h-1.5 rounded-full bg-status-review"></div>
+<span class="font-label-caps text-label-caps text-status-review uppercase">Needs Feedback</span>
+</div>
+<div class="h-4 w-px bg-border-subtle mx-xs"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary">PRJ-0892</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-text-primary mb-sm truncate">Kuroi Summer Merch</h1>
+<div class="flex flex-wrap items-center gap-x-lg gap-y-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase mb-xs">Client</span>
+<div class="flex items-center gap-xs">
+<div class="w-5 h-5 rounded bg-surface-bright flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-surface">storefront</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary">Neon Syndicate</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase mb-xs">Priority</span>
+<div class="flex items-center gap-xs text-error">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span class="font-body-md text-body-md">High</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase mb-xs">Deadline</span>
+<div class="flex items-center gap-xs text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">calendar_today</span>
+<span class="font-body-md text-body-md">Sept 02, 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap gap-sm justify-end">
+<button class="bg-surface-interface border border-border-subtle text-text-secondary hover:text-text-primary hover:bg-surface-container px-sm py-xs rounded flex items-center gap-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="font-body-md text-body-md">Upload</span>
+</button>
+<button class="bg-surface-interface border border-border-subtle text-text-secondary hover:text-text-primary hover:bg-surface-container px-sm py-xs rounded flex items-center gap-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span class="font-body-md text-body-md">Feedback</span>
+</button>
+<button class="bg-status-assigned text-on-primary hover:opacity-90 px-md py-xs rounded flex items-center gap-xs transition-opacity shadow-[0_0_12px_rgba(99,102,241,0.3)]">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-body-md text-body-md font-medium">Add Task</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Phase Progress Tracker -->
+<div class="relative z-10 px-lg py-md border-b border-border-subtle bg-surface-base">
+<div class="flex items-center justify-between">
+<div class="flex-1 flex items-center">
+<!-- Brief -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-full absolute top-3 left-1/2 h-[2px] bg-status-completed/30 z-0 group-last:hidden"></div>
+<div class="w-6 h-6 rounded-full bg-status-completed flex items-center justify-center z-10 border-2 border-surface-base">
+<span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-status-completed mt-xs">Briefing</span>
+</div>
+<!-- Assigned -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-full absolute top-3 left-1/2 h-[2px] bg-status-completed/30 z-0 group-last:hidden"></div>
+<div class="w-6 h-6 rounded-full bg-status-completed flex items-center justify-center z-10 border-2 border-surface-base">
+<span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-status-completed mt-xs">Assigned</span>
+</div>
+<!-- Production -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-full absolute top-3 left-1/2 h-[2px] bg-status-completed/30 z-0 group-last:hidden"></div>
+<div class="w-6 h-6 rounded-full bg-status-completed flex items-center justify-center z-10 border-2 border-surface-base">
+<span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-status-completed mt-xs">Production</span>
+</div>
+<!-- Internal Review (Active) -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-full absolute top-3 left-1/2 h-[2px] bg-border-subtle z-0 group-last:hidden"></div>
+<div class="w-6 h-6 rounded-full bg-status-review flex items-center justify-center z-10 border-2 border-surface-base shadow-[0_0_8px_rgba(245,158,11,0.5)]">
+<div class="w-2 h-2 rounded-full bg-surface-base"></div>
+</div>
+<span class="font-label-caps text-label-caps text-status-review mt-xs">Internal Review</span>
+</div>
+<!-- Client Review -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-full absolute top-3 left-1/2 h-[2px] bg-border-subtle z-0 group-last:hidden"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center z-10 border-2 border-surface-base">
+<div class="w-2 h-2 rounded-full bg-border-subtle"></div>
+</div>
+<span class="font-label-caps text-label-caps text-text-secondary mt-xs">Client Review</span>
+</div>
+<!-- Delivery -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center z-10 border-2 border-surface-base">
+<div class="w-2 h-2 rounded-full bg-border-subtle"></div>
+</div>
+<span class="font-label-caps text-label-caps text-text-secondary mt-xs">Delivery</span>
+</div>
+</div>
+<button class="ml-lg bg-surface-interface border border-border-subtle text-text-secondary hover:text-text-primary px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span class="font-label-caps text-label-caps">Log</span>
+</button>
+</div>
+</div>
+<!-- Task Board (Kanban) -->
+<div class="flex-1 overflow-x-auto overflow-y-hidden p-lg flex gap-lg z-10">
+<!-- Column: To Do -->
+<div class="flex-shrink-0 w-[320px] flex flex-col h-full bg-surface-elevated/50 border border-border-subtle rounded-lg">
+<div class="p-sm border-b border-border-subtle flex items-center justify-between bg-surface-container-low rounded-t-lg">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-backlog"></div>
+<span class="font-headline-sm text-headline-sm text-text-primary">To Do</span>
+<span class="bg-surface-interface px-1.5 py-0.5 rounded text-mono-sm font-mono-sm text-text-secondary">2</span>
+</div>
+<button class="text-text-secondary hover:text-text-primary p-xs"><span class="material-symbols-outlined text-[18px]">more_horiz</span></button>
+</div>
+<div class="flex-1 overflow-y-auto p-sm space-y-sm">
+<!-- Task Card -->
+<div class="bg-surface-container border border-border-subtle rounded p-sm cursor-grab hover:border-text-secondary transition-colors group">
+<div class="flex items-start justify-between mb-xs">
+<span class="font-label-caps text-label-caps text-text-secondary">T-45</span>
+<div class="w-6 h-6 rounded bg-surface-interface border border-border-subtle flex items-center justify-center text-text-secondary group-hover:text-text-primary">
+<span class="material-symbols-outlined text-[14px]">edit</span>
+</div>
+</div>
+<h3 class="font-body-md text-body-md text-text-primary mb-sm leading-tight">Hoodie Tech Pack</h3>
+<div class="flex items-center gap-xs mb-sm">
+<span class="bg-surface-interface border border-border-subtle text-text-secondary font-label-caps text-[9px] px-1 py-0.5 rounded uppercase">Apparel</span>
+</div>
+<div class="flex items-center justify-between border-t border-border-subtle pt-sm mt-xs">
+<div class="flex -space-x-1">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center border border-surface-container z-10"><span class="font-label-caps text-[9px] text-on-primary">J</span></div>
+</div>
+<div class="flex items-center gap-xs text-text-secondary font-mono-sm text-[10px]">
+<span class="material-symbols-outlined text-[14px]">attach_file</span> 0
+              <span class="material-symbols-outlined text-[14px] ml-1">chat_bubble</span> 0
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: In Progress -->
+<div class="flex-shrink-0 w-[320px] flex flex-col h-full bg-surface-elevated/50 border border-border-subtle rounded-lg">
+<div class="p-sm border-b border-border-subtle flex items-center justify-between bg-surface-container-low rounded-t-lg">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-assigned"></div>
+<span class="font-headline-sm text-headline-sm text-text-primary">In Progress</span>
+<span class="bg-surface-interface px-1.5 py-0.5 rounded text-mono-sm font-mono-sm text-text-secondary">1</span>
+</div>
+<button class="text-text-secondary hover:text-text-primary p-xs"><span class="material-symbols-outlined text-[18px]">more_horiz</span></button>
+</div>
+<div class="flex-1 overflow-y-auto p-sm space-y-sm">
+<!-- Task Card w/ Subtasks -->
+<div class="bg-surface-container border border-primary/30 rounded p-sm cursor-grab shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+<div class="flex items-start justify-between mb-xs">
+<span class="font-label-caps text-label-caps text-status-assigned">T-42</span>
+<div class="w-5 h-5 rounded bg-surface-interface flex items-center justify-center text-text-secondary">
+<img class="w-full h-full rounded object-cover" data-alt="Small avatar of a neon punk character with pink hair in a dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9KJdUvW8u8TP0tLQxpUZSIYApdT6x53pIuIjvTPubgoKQhdjJBCkK94mjXEsBsZO1bnvMyJ6vB0MN8BenFelYi4hGXc7lsayLwhjQnU4Cw20U97q4bw1E2zoFTp3E48JwtJ1bxZpRgEizIWETytdL2LppWgcFe8d32aZr9wy-2cbQYTun3qT6B0FOIc95czJ1dbAPPdZfJZPDnJgJYEGZJCuO15rmEqQKHi496nTcQzVQGjkfT0"/>
+</div>
+</div>
+<h3 class="font-body-md text-body-md text-text-primary mb-sm leading-tight">Sticker Pack Illustration</h3>
+<!-- Subtasks -->
+<div class="bg-surface-interface rounded p-xs mb-sm border border-border-subtle">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono-sm text-[10px] text-text-secondary">Progress</span>
+<span class="font-mono-sm text-[10px] text-text-primary">2/3</span>
+</div>
+<div class="w-full h-1 bg-surface-base rounded-full overflow-hidden mb-xs">
+<div class="h-full bg-status-assigned w-[66%]"></div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[12px] text-status-completed">check_circle</span>
+<span class="font-body-md text-[11px] text-text-secondary line-through">Concept Sketches</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[12px] text-status-completed">check_circle</span>
+<span class="font-body-md text-[11px] text-text-secondary line-through">Lineart</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[12px] text-status-assigned">radio_button_unchecked</span>
+<span class="font-body-md text-[11px] text-text-primary">Coloring & Shading</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-border-subtle pt-sm mt-xs">
+<div class="flex items-center gap-xs text-text-secondary font-mono-sm text-[10px]">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Sep 01
+            </div>
+<div class="flex items-center gap-xs text-text-secondary font-mono-sm text-[10px]">
+<span class="material-symbols-outlined text-[14px]">attach_file</span> 4
+              <span class="material-symbols-outlined text-[14px] ml-1">chat_bubble</span> 12
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Review -->
+<div class="flex-shrink-0 w-[320px] flex flex-col h-full bg-surface-elevated/50 border border-status-review/20 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.05)]">
+<div class="p-sm border-b border-border-subtle flex items-center justify-between bg-surface-container-low rounded-t-lg">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-review animate-pulse"></div>
+<span class="font-headline-sm text-headline-sm text-text-primary">Review</span>
+<span class="bg-status-review/20 px-1.5 py-0.5 rounded text-mono-sm font-mono-sm text-status-review">1</span>
+</div>
+<button class="text-text-secondary hover:text-text-primary p-xs"><span class="material-symbols-outlined text-[18px]">more_horiz</span></button>
+</div>
+<div class="flex-1 overflow-y-auto p-sm space-y-sm bg-status-review/5">
+<!-- Task Card -->
+<div class="bg-surface-container border-l-2 border-l-status-review border-y border-r border-y-border-subtle border-r-border-subtle rounded p-sm cursor-grab">
+<div class="flex items-start justify-between mb-xs">
+<span class="font-label-caps text-label-caps text-status-review">T-38</span>
+<div class="w-6 h-6 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+</div>
+</div>
+<h3 class="font-body-md text-body-md text-text-primary mb-sm leading-tight">Key Visual Composition</h3>
+<!-- Image Preview -->
+<div class="w-full h-24 mb-sm rounded border border-border-subtle overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="A striking anime-style key visual featuring a central character surrounded by floating neon merchandise elements against a dark cyberpunk city backdrop. High contrast, dynamic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEEqgAtfzoUvDAVXR6NltyOPcuBM_D1_7xs-I_ZdJHtKuBbJXcVmdKKH4k5fNUKjFEwX0t7s5CfgUFnhbf7VjKPg3d_bAxuCDAWAbOS6RPDAZ1Cq7v99DPdfdaXkgMUEjmgfnvc-Hr6GXkqzS2eIbkEyHQY3VotFAXGfvFQvF8NbmDKfxKSZxPyIwTtV4uEgieVDxi7K6gWhiVWIn5PM5a-u4rzCrlAWrZVV2U9lzxjL0UHGO8kAQ"/>
+<div class="absolute inset-0 bg-surface-base/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="bg-surface-interface border border-border-subtle px-2 py-1 rounded text-mono-sm text-text-primary">View</button>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-border-subtle pt-sm mt-xs">
+<div class="flex -space-x-1">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center border border-surface-container z-10"><span class="font-label-caps text-[9px] text-on-secondary">A</span></div>
+<div class="w-5 h-5 rounded-full bg-surface-bright flex items-center justify-center border border-surface-container z-0"><span class="font-label-caps text-[9px] text-on-surface">K</span></div>
+</div>
+<div class="flex items-center gap-xs text-status-review font-mono-sm text-[10px]">
+<span class="material-symbols-outlined text-[14px]">chat_bubble</span> 3 unread
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty Space for scrolling -->
+<div class="w-4 flex-shrink-0"></div>
+</div>
+</div>

@@ -1,0 +1,237 @@
+<div class="flex flex-col w-full">
+<div class="px-xl py-lg flex flex-col gap-xl max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="flex items-end justify-between w-full">
+<div class="flex flex-col gap-sm">
+<h1 class="font-display-lg text-display-lg text-text-primary">Team Workload</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl">Monitor resource allocation, capacity, and active project assignments across the studio.</p>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-sm bg-surface-container-low p-xs rounded-xl shadow-sm">
+<button class="px-md py-sm rounded-lg bg-surface-interface text-text-primary font-headline-sm text-headline-sm shadow-sm transition-all">All Roles</button>
+<button class="px-md py-sm rounded-lg text-text-secondary hover:bg-surface-interface hover:text-text-primary font-headline-sm text-headline-sm transition-all">Design</button>
+<button class="px-md py-sm rounded-lg text-text-secondary hover:bg-surface-interface hover:text-text-primary font-headline-sm text-headline-sm transition-all">Illustration</button>
+<button class="px-md py-sm rounded-lg text-text-secondary hover:bg-surface-interface hover:text-text-primary font-headline-sm text-headline-sm transition-all">PM</button>
+</div>
+<div class="h-8 w-[1px] bg-surface-variant mx-sm"></div>
+<button class="flex items-center justify-center w-10 h-10 bg-primary text-on-primary rounded-xl shadow-md hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Summary Metrics Grid -->
+<div class="grid grid-cols-4 gap-md">
+<div class="bg-surface-elevated p-lg rounded-xl shadow-sm flex flex-col gap-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-primary">groups</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-assigned"></div>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase">Total Members</span>
+</div>
+<div class="font-display-lg text-display-lg text-text-primary">24</div>
+<div class="flex items-center gap-xs text-status-approved font-mono-sm text-mono-sm mt-auto">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+2 this month</span>
+</div>
+</div>
+<div class="bg-surface-elevated p-lg rounded-xl shadow-sm flex flex-col gap-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-status-review">speed</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-review"></div>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase">Avg Capacity</span>
+</div>
+<div class="font-display-lg text-display-lg text-text-primary">78%</div>
+<div class="w-full bg-surface-container-high rounded-full h-1 mt-auto">
+<div class="bg-status-review h-1 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="bg-surface-elevated p-lg rounded-xl shadow-sm flex flex-col gap-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-status-revision">warning</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-revision"></div>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase">Overloaded</span>
+</div>
+<div class="font-display-lg text-display-lg text-text-primary">3</div>
+<div class="flex items-center gap-xs text-text-secondary font-mono-sm text-mono-sm mt-auto">
+<span>Requires immediate attention</span>
+</div>
+</div>
+<div class="bg-surface-elevated p-lg rounded-xl shadow-sm flex flex-col gap-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-status-approved">check_circle</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-status-approved"></div>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase">Available</span>
+</div>
+<div class="font-display-lg text-display-lg text-text-primary">5</div>
+<div class="flex -space-x-2 mt-auto">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-mono-sm text-mono-sm text-text-primary shadow-sm relative z-30">L</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-mono-sm text-mono-sm text-text-primary shadow-sm relative z-20">M</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-mono-sm text-mono-sm text-text-primary shadow-sm relative z-10">T</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-mono-sm text-mono-sm text-text-secondary shadow-sm relative z-0">+2</div>
+</div>
+</div>
+</div>
+<!-- Main Team List -->
+<div class="bg-surface-elevated rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="grid grid-cols-[3fr_2fr_3fr_1fr] gap-md p-md bg-surface-interface border-b border-surface-variant font-label-caps text-label-caps text-text-secondary uppercase sticky top-0 z-10">
+<div>Team Member</div>
+<div>Role & Dept</div>
+<div>Workload Capacity</div>
+<div class="text-right">Status</div>
+</div>
+<div class="flex flex-col divide-y divide-surface-variant max-h-[800px] overflow-y-auto">
+<!-- Row 1 -->
+<div class="grid grid-cols-[3fr_2fr_3fr_1fr] gap-md p-md items-center hover:bg-surface-interface/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-primary">AK</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-status-approved rounded-full border-[3px] border-surface-elevated"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">Aki Nakamura</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary truncate">aki@somn.studio</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-body-md text-body-md text-text-primary">Creative Director</span>
+<div class="flex items-center gap-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-text-secondary">Design</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm w-full pr-lg">
+<div class="flex justify-between items-center">
+<span class="font-mono-sm text-mono-sm text-text-secondary">80%</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary">4 Projects</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-status-review h-full rounded-full w-[80%] transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="flex items-center gap-xs bg-status-approved/10 border border-status-approved/30 px-sm py-1 rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-status-approved"></div>
+<span class="font-label-caps text-label-caps text-status-approved">Active</span>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-[3fr_2fr_3fr_1fr] gap-md p-md items-center hover:bg-surface-interface/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="Portrait of a young creative professional with short dark hair in a well-lit studio environment, subtle dark cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF1A4IVtkzoOt53VCtJtitkbBZyCHRDRRiNcIb6H-yWBJrW5bJoeAsEUvsaAiPFhD0LVyk--tGNy_I0wWzjKp2Oky9A3LVW_jNGKAnEMKJoVtC8ME0vjSv4FdgHSbRcsNGqxibW8QoQBdfFIYKCCKr-0CAud-T982pQo9VkrEM7qLjHTUc6lTP34jtisMkIi-HPrSpKAN_1iIwrcIYencxpbhLMSKQuLZ_tJVSmI48iSSuohxGG30"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-status-revision rounded-full border-[3px] border-surface-elevated animate-pulse"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">Hana Lee</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary truncate">hana@somn.studio</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-body-md text-body-md text-text-primary">Lead Illustrator</span>
+<div class="flex items-center gap-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-text-secondary">Illustration</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm w-full pr-lg">
+<div class="flex justify-between items-center">
+<span class="font-mono-sm text-mono-sm text-status-revision font-bold">110%</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary">6 Projects</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-status-revision h-full rounded-full w-full transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="flex items-center gap-xs bg-status-revision/10 border border-status-revision/30 px-sm py-1 rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-status-revision"></div>
+<span class="font-label-caps text-label-caps text-status-revision">Overload</span>
+</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-[3fr_2fr_3fr_1fr] gap-md p-md items-center hover:bg-surface-interface/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-secondary-container">KT</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-status-assigned rounded-full border-[3px] border-surface-elevated"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">Kenji Takahashi</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary truncate">kenji@somn.studio</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-body-md text-body-md text-text-primary">Senior Designer</span>
+<div class="flex items-center gap-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-text-secondary">Design</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm w-full pr-lg">
+<div class="flex justify-between items-center">
+<span class="font-mono-sm text-mono-sm text-text-secondary">45%</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary">2 Projects</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-status-assigned h-full rounded-full w-[45%] transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="flex items-center gap-xs bg-status-assigned/10 border border-status-assigned/30 px-sm py-1 rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-status-assigned"></div>
+<span class="font-label-caps text-label-caps text-status-assigned">Available</span>
+</div>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-[3fr_2fr_3fr_1fr] gap-md p-md items-center hover:bg-surface-interface/50 transition-colors cursor-pointer group opacity-60">
+<div class="flex items-center gap-md">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-text-secondary">MW</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-status-backlog rounded-full border-[3px] border-surface-elevated"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">Maya Wright</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary truncate">maya@somn.studio</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-body-md text-body-md text-text-primary">Project Manager</span>
+<div class="flex items-center gap-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-text-secondary">PM</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm w-full pr-lg">
+<div class="flex justify-between items-center">
+<span class="font-mono-sm text-mono-sm text-text-secondary">0%</span>
+<span class="font-mono-sm text-mono-sm text-text-secondary">Ooo until Oct 15</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-status-backlog h-full rounded-full w-[0%] transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="flex items-center gap-xs bg-status-backlog/10 border border-status-backlog/30 px-sm py-1 rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-status-backlog"></div>
+<span class="font-label-caps text-label-caps text-text-secondary">Away</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,87 @@
+[
+  {
+    "section": "Workspace",
+    "items": [
+      {
+        "path": "overview",
+        "icon": "dashboard",
+        "label": "Overview"
+      },
+      {
+        "path": "projects",
+        "icon": "account_tree",
+        "label": "Projects"
+      },
+      {
+        "path": "my-tasks",
+        "icon": "assignment_turned_in",
+        "label": "My Tasks"
+      },
+      {
+        "path": "calendar",
+        "icon": "calendar_today",
+        "label": "Calendar"
+      },
+      {
+        "path": "team",
+        "icon": "group",
+        "label": "Team"
+      },
+      {
+        "path": "clients",
+        "icon": "business_center",
+        "label": "Clients"
+      },
+      {
+        "path": "assets",
+        "icon": "category",
+        "label": "Assets"
+      },
+      {
+        "path": "feedback",
+        "icon": "reviews",
+        "label": "Feedback"
+      },
+      {
+        "path": "files",
+        "icon": "folder",
+        "label": "Files"
+      }
+    ]
+  },
+  {
+    "section": "Management",
+    "items": [
+      {
+        "path": "workload",
+        "icon": "speed",
+        "label": "Workload"
+      },
+      {
+        "path": "deadlines",
+        "icon": "alarm",
+        "label": "Deadlines"
+      },
+      {
+        "path": "reports",
+        "icon": "analytics",
+        "label": "Reports"
+      }
+    ]
+  },
+  {
+    "section": "Communication",
+    "items": [
+      {
+        "path": "announcements",
+        "icon": "campaign",
+        "label": "Announcements"
+      },
+      {
+        "path": "team-chat",
+        "icon": "chat_bubble",
+        "label": "Team Chat"
+      }
+    ]
+  }
+]

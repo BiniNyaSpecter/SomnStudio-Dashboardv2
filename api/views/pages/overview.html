@@ -1,0 +1,253 @@
+<div class="flex flex-col w-full p-lg gap-lg">
+<!-- Header / Welcome -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mt-sm">
+<div>
+<h1 class="font-display-lg text-display-lg text-text-primary tracking-tight">Good evening, Aki.</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mt-xs">Here's what needs your attention today.</p>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-surface-elevated text-text-primary px-md py-sm rounded border border-border-subtle hover:bg-surface-interface transition-colors font-headline-sm text-headline-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        New Project
+      </button>
+<button class="bg-primary text-on-primary px-md py-sm rounded hover:bg-surface-tint transition-colors font-headline-sm text-headline-sm">
+        Generate Report
+      </button>
+</div>
+</div>
+<!-- KPIs -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md flex flex-col justify-between hover:bg-surface-interface transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-status-assigned/10 rounded-full blur-2xl group-hover:bg-status-assigned/20 transition-colors"></div>
+<div class="flex items-start justify-between mb-lg relative z-10">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest">Active Projects</span>
+<span class="material-symbols-outlined text-status-assigned text-[20px]">folder_open</span>
+</div>
+<div class="flex items-end gap-sm relative z-10">
+<span class="font-display-lg text-[40px] leading-none text-text-primary">22</span>
+<span class="font-body-md text-body-md text-status-approved mb-1 flex items-center"><span class="material-symbols-outlined text-[14px]">arrow_upward</span> 3 this week</span>
+</div>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md flex flex-col justify-between hover:bg-surface-interface transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-status-briefing/10 rounded-full blur-2xl group-hover:bg-status-briefing/20 transition-colors"></div>
+<div class="flex items-start justify-between mb-lg relative z-10">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest">Tasks Due Today</span>
+<span class="material-symbols-outlined text-status-briefing text-[20px]">task_alt</span>
+</div>
+<div class="flex items-end gap-sm relative z-10">
+<span class="font-display-lg text-[40px] leading-none text-text-primary">8</span>
+<span class="font-body-md text-body-md text-text-secondary mb-1"> across 4 projects</span>
+</div>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md flex flex-col justify-between hover:bg-surface-interface transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-status-review/10 rounded-full blur-2xl group-hover:bg-status-review/20 transition-colors"></div>
+<div class="flex items-start justify-between mb-lg relative z-10">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest">Pending Reviews</span>
+<span class="material-symbols-outlined text-status-review text-[20px]">rate_review</span>
+</div>
+<div class="flex items-end gap-sm relative z-10">
+<span class="font-display-lg text-[40px] leading-none text-text-primary">5</span>
+<span class="font-body-md text-body-md text-text-secondary mb-1 flex items-center"> awaiting approval</span>
+</div>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md flex flex-col justify-between hover:bg-surface-interface transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-status-revision/10 rounded-full blur-2xl group-hover:bg-status-revision/20 transition-colors"></div>
+<div class="flex items-start justify-between mb-lg relative z-10">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest">Overdue</span>
+<span class="material-symbols-outlined text-status-revision text-[20px]">warning</span>
+</div>
+<div class="flex items-end gap-sm relative z-10">
+<span class="font-display-lg text-[40px] leading-none text-text-primary">3</span>
+<span class="font-body-md text-body-md text-status-revision mb-1 flex items-center"> immediate action</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area: Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg h-full pb-xl">
+<!-- Active Projects List (Takes up 2 columns) -->
+<div class="lg:col-span-2 flex flex-col gap-sm">
+<div class="flex items-center justify-between px-xs pb-sm border-b border-border-subtle">
+<h2 class="font-headline-md text-headline-md text-text-primary">Active Projects</h2>
+<button class="font-body-md text-body-md text-text-secondary hover:text-text-primary transition-colors flex items-center gap-xs">
+          View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex flex-col gap-xs mt-sm">
+<!-- Project Row 1 -->
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md hover:bg-surface-interface transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-high border border-border-subtle flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 mix-blend-screen group-hover:opacity-100 transition-opacity" data-alt="Abstract minimalist geometric logo in soft pastel purple and neon pink on dark background, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ9a1YQfA1_fjXu4rMyXk2fQjAj0tqjnb-wf2BltMaTnS_QuVnlXQY78ProYayrL4mKMChybD4e6EnIp-wk3aT7VaBrgqOuaAf76iHzG2QXUdL7QumY3cGNgduXrQFWU3YBxPlRoz4sGI843TKNdwZqKnB22JZVHJ6a2wt4thLoBQC0iqS1YRl0m-nfEb3suN1cogN0UGAuaudB5s9lRX3MoErQ5cRwuLG1-WxnSUshGtjQnoNHBw"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors">Kuroi Summer Merch</h3>
+<p class="font-body-md text-[13px] text-text-secondary">V-Idol Agency • Illustration & Apparel</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">A</div>
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">H</div>
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">R</div>
+</div>
+<div class="flex items-center gap-xs px-2 py-1 rounded bg-status-review/10 border border-status-review/30">
+<div class="w-1.5 h-1.5 rounded-full bg-status-review"></div>
+<span class="font-label-caps text-[10px] text-status-review uppercase tracking-wider">Client Review</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex-1 bg-surface-base h-1.5 rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-primary rounded-full w-[78%] relative">
+<div class="absolute inset-0 bg-white/20"></div>
+</div>
+</div>
+<span class="font-mono-sm text-[11px] text-text-secondary w-8 text-right">78%</span>
+<div class="h-4 w-[1px] bg-border-subtle mx-xs"></div>
+<span class="font-body-md text-[12px] text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Oct 24
+             </span>
+</div>
+</div>
+<!-- Project Row 2 -->
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md hover:bg-surface-interface transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-high border border-border-subtle flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 mix-blend-screen group-hover:opacity-100 transition-opacity" data-alt="Cyberpunk grid graphic with glowing cyan elements, highly technical, dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq7JkrI6776bWBEsiC6lXitNTfUrQxYV33gcGBkp5pNsvWUPCmXL6R5h7fKnit5oCuZOb2OPfTbUB5NKiA3lzkFp9vhr3vKphiS4ZiEz4z0KnlbQQ8kf0KxJyi1jyg5-DygC_whI3LjPZT8I2Wdg3AMoMAMQ6c7bp7LmN1Qydom-wvwWqwA2rCexAMeCcqun3vSjLecKiUV2bCIENszt6lr-IXXfIJmfVaD8vJdxSnLZnEnE6_wDw"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors">VTuber Asset Pack v2</h3>
+<p class="font-body-md text-[13px] text-text-secondary">StreamElements • UI / UX</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">M</div>
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">K</div>
+</div>
+<div class="flex items-center gap-xs px-2 py-1 rounded bg-status-production/10 border border-status-production/30">
+<div class="w-1.5 h-1.5 rounded-full bg-status-production"></div>
+<span class="font-label-caps text-[10px] text-status-production uppercase tracking-wider">In Production</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex-1 bg-surface-base h-1.5 rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-status-production rounded-full w-[45%] relative">
+<div class="absolute inset-0 bg-white/20"></div>
+</div>
+</div>
+<span class="font-mono-sm text-[11px] text-text-secondary w-8 text-right">45%</span>
+<div class="h-4 w-[1px] bg-border-subtle mx-xs"></div>
+<span class="font-body-md text-[12px] text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Nov 12
+             </span>
+</div>
+</div>
+<!-- Project Row 3 -->
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md hover:bg-surface-interface transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-high border border-border-subtle flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 mix-blend-screen group-hover:opacity-100 transition-opacity" data-alt="Minimalist architectural sketch, monochrome, sharp lines, cinematic shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCmwA8F4yJaxdHIn87vY7k7REHDQsrABEwgs1w8lyX677-4Z8E35xxbfdW9MN3xfxhT6tAbPUoyhUVJMmXOwt170tnjwDMKeKSx1o9umQP56fJ_0y7FusNrT52WmCYlrUkSefJCUXvTBRnypCet11DUjmHSYXFL0T8Ujc9T2HU99F0FiaPY1gdxaPjg17ZQs2xEHDqWbYqk24WzXZf9S9PHn8jmssKzsFk-2zKgKYBQFzzAUzgutU"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors">Project Nexus Brand</h3>
+<p class="font-body-md text-[13px] text-text-secondary">Internal • Branding</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-surface border border-border-subtle flex items-center justify-center text-[10px] font-bold text-on-surface">A</div>
+</div>
+<div class="flex items-center gap-xs px-2 py-1 rounded bg-status-backlog/10 border border-status-backlog/30">
+<div class="w-1.5 h-1.5 rounded-full bg-status-backlog"></div>
+<span class="font-label-caps text-[10px] text-status-backlog uppercase tracking-wider">Backlog</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex-1 bg-surface-base h-1.5 rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-status-backlog rounded-full w-[10%] relative">
+<div class="absolute inset-0 bg-white/20"></div>
+</div>
+</div>
+<span class="font-mono-sm text-[11px] text-text-secondary w-8 text-right">10%</span>
+<div class="h-4 w-[1px] bg-border-subtle mx-xs"></div>
+<span class="font-body-md text-[12px] text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> TBD
+             </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Activity Feed -->
+<div class="lg:col-span-1 flex flex-col gap-sm">
+<div class="flex items-center justify-between px-xs pb-sm border-b border-border-subtle">
+<h2 class="font-headline-md text-headline-md text-text-primary">Recent Activity</h2>
+<span class="material-symbols-outlined text-text-secondary text-[20px] cursor-pointer hover:text-text-primary">filter_list</span>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-xl p-md flex-1 overflow-hidden relative">
+<!-- Visual fade for scrolling effect in static layout -->
+<div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-elevated to-transparent z-10 pointer-events-none rounded-b-xl"></div>
+<div class="flex flex-col gap-lg relative">
+<!-- Activity Item 1 -->
+<div class="flex gap-md relative">
+<div class="absolute left-4 top-10 bottom-[-24px] w-[1px] bg-border-subtle"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-border-subtle flex items-center justify-center shrink-0 text-[12px] font-bold z-10">H</div>
+<div class="flex flex-col gap-xs mt-1">
+<p class="font-body-md text-[13px] text-text-primary leading-tight">
+<span class="font-bold">Hana</span> uploaded <span class="font-mono-sm text-status-briefing">Sticker_V03.png</span>
+</p>
+<p class="font-body-md text-[11px] text-text-secondary">Kuroi Summer Merch • 10m ago</p>
+<div class="mt-xs w-full max-w-[200px] h-20 rounded border border-border-subtle overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a highly detailed, cute anime sticker design featuring a stylized cat skull, pastel goth aesthetic, clean vector lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ5DiAE5FYCGQ-s_rZfSJbY95quHqyrj9MqZxz5BblV4QBA-vnjpCST2rXYowqARiUbiDTrQUy9HLuiPeA4AplYws13vaY8_02chnHiXSsdmX5jSQtG7phr2wzpwBpD0YN8fiqXp3IMRlWsdxqml9vAyQ6UOcE3baz7VG2d8pELiprjH8zXjIDkDmidFPL1FZ-Sm8DxFjaZhjoZStqV1NWi9-C2HekRoBYH8_tIHyIr8ZecnXB1Gc"/>
+</div>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex gap-md relative">
+<div class="absolute left-4 top-10 bottom-[-24px] w-[1px] bg-border-subtle"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-border-subtle flex items-center justify-center shrink-0 z-10 text-status-approved">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-xs mt-1">
+<p class="font-body-md text-[13px] text-text-primary leading-tight">
+<span class="font-bold">Client (Kuroi)</span> approved milestone <span class="font-bold">Phase 1 Drafts</span>
+</p>
+<p class="font-body-md text-[11px] text-text-secondary">Kuroi Summer Merch • 45m ago</p>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex gap-md relative">
+<div class="absolute left-4 top-10 bottom-[-24px] w-[1px] bg-border-subtle"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-border-subtle flex items-center justify-center shrink-0 text-[12px] font-bold z-10">R</div>
+<div class="flex flex-col gap-xs mt-1">
+<p class="font-body-md text-[13px] text-text-primary leading-tight">
+<span class="font-bold">Ren</span> left a comment on <span class="font-bold">Dashboard_UI.fig</span>
+</p>
+<p class="font-body-md text-[11px] text-text-secondary">VTuber Asset Pack v2 • 2h ago</p>
+<div class="bg-surface-base border border-border-subtle rounded p-sm mt-xs">
+<p class="font-body-md text-[12px] text-text-secondary italic">"Could we increase the contrast on the secondary buttons? They get lost in dark mode."</p>
+</div>
+</div>
+</div>
+<!-- Activity Item 4 -->
+<div class="flex gap-md relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-border-subtle flex items-center justify-center shrink-0 z-10 text-status-assigned">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+</div>
+<div class="flex flex-col gap-xs mt-1">
+<p class="font-body-md text-[13px] text-text-primary leading-tight">
+                You assigned <span class="font-bold">Create social promo assets</span> to <span class="font-bold">Mika</span>
+</p>
+<p class="font-body-md text-[11px] text-text-secondary">Project Nexus Brand • 4h ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

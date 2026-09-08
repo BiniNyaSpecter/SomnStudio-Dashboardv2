@@ -1,0 +1,198 @@
+<div class="flex flex-col w-full p-lg gap-lg">
+<!-- Page Header -->
+<div class="flex items-end justify-between w-full">
+<div>
+<h1 class="font-display-lg text-display-lg text-text-primary mb-xs">Reports & Analytics</h1>
+<p class="font-body-lg text-body-lg text-text-secondary">Performance metrics for Q3 2024</p>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-surface-container-high hover:bg-surface-elevated text-text-primary px-md py-sm rounded-lg font-headline-sm text-headline-sm flex items-center gap-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        Q3 2024
+        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary px-md py-sm rounded-lg font-headline-sm text-headline-sm flex items-center gap-xs transition-colors shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export
+      </button>
+</div>
+</div>
+<!-- Top Metrics Row -->
+<div class="grid grid-cols-4 gap-md">
+<!-- Metric 1 -->
+<div class="bg-surface-elevated rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-status-completed"></div>
+<div class="flex items-center gap-sm mb-sm text-text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+        On-time Completion
+      </div>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-text-primary">94%</span>
+<span class="font-body-md text-body-md text-status-completed flex items-center mb-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          2.1%
+        </span>
+</div>
+<!-- Sparkline decoration -->
+<svg class="absolute bottom-0 right-0 w-1/2 h-1/2 text-status-completed opacity-20 group-hover:opacity-40 transition-opacity" preserveaspectratio="none" viewbox="0 0 100 50">
+<path d="M0,40 Q20,30 40,45 T80,20 T100,5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-elevated rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-status-review"></div>
+<div class="flex items-center gap-sm mb-sm text-text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">rate_review</span>
+        Avg Revisions
+      </div>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-text-primary">2.4</span>
+<span class="font-body-md text-body-md text-status-completed flex items-center mb-1">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+          0.3
+        </span>
+</div>
+<svg class="absolute bottom-0 right-0 w-1/2 h-1/2 text-status-review opacity-20 group-hover:opacity-40 transition-opacity" preserveaspectratio="none" viewbox="0 0 100 50">
+<path d="M0,10 Q20,20 40,15 T80,40 T100,45" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-elevated rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-status-assigned"></div>
+<div class="flex items-center gap-sm mb-sm text-text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+        Avg Turnaround
+      </div>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-text-primary">12<span class="text-headline-md font-headline-md">d</span></span>
+<span class="font-body-md text-body-md text-text-secondary flex items-center mb-1">
+          Stable
+        </span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-elevated rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-status-production"></div>
+<div class="flex items-center gap-sm mb-sm text-text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+        Projects Completed
+      </div>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-text-primary">87</span>
+<span class="font-body-md text-body-md text-status-completed flex items-center mb-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          12
+        </span>
+</div>
+</div>
+</div>
+<!-- Main Charts Area -->
+<div class="grid grid-cols-3 gap-md">
+<!-- Trend Chart (Spans 2 columns) -->
+<div class="col-span-2 bg-surface-elevated rounded-xl p-lg shadow-sm flex flex-col min-h-[400px]">
+<div class="flex items-center justify-between mb-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary">Projects Completed Trend</h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">Monthly velocity over the last two quarters</p>
+</div>
+<div class="flex gap-sm">
+<span class="flex items-center gap-xs font-mono-sm text-mono-sm text-text-secondary"><div class="w-2 h-2 rounded-full bg-primary"></div> Actual</span>
+<span class="flex items-center gap-xs font-mono-sm text-mono-sm text-text-secondary"><div class="w-2 h-2 rounded-full bg-surface-container-highest border border-border-subtle"></div> Target</span>
+</div>
+</div>
+<!-- Faux Chart Area -->
+<div class="flex-1 relative w-full flex items-end justify-between px-md pb-md mt-auto">
+<!-- Grid lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-8">
+<div class="w-full h-px bg-surface-container border-b border-dashed border-border-subtle/50"></div>
+<div class="w-full h-px bg-surface-container border-b border-dashed border-border-subtle/50"></div>
+<div class="w-full h-px bg-surface-container border-b border-dashed border-border-subtle/50"></div>
+<div class="w-full h-px bg-surface-container border-b border-dashed border-border-subtle/50"></div>
+<div class="w-full h-px bg-surface-container border-b border-solid border-border-subtle"></div>
+</div>
+<!-- Bars -->
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[60%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[45%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">Apr</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[65%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[55%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">May</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[70%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[85%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">Jun</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[75%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[60%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">Jul</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[80%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[95%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">Aug</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-sm group w-12 h-full">
+<div class="w-full h-[85%] bg-surface-container-highest border border-border-subtle rounded-t-sm absolute bottom-8 opacity-50"></div>
+<div class="w-full h-[75%] bg-primary hover:bg-primary-fixed rounded-t-sm transition-all duration-300 absolute bottom-8 cursor-pointer shadow-[0_0_15px_rgba(200,198,199,0.1)]"></div>
+<span class="font-mono-sm text-mono-sm text-text-secondary absolute bottom-0">Sep</span>
+</div>
+</div>
+</div>
+<!-- Workload Donut Chart -->
+<div class="bg-surface-elevated rounded-xl p-lg shadow-sm flex flex-col min-h-[400px]">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-text-primary">Workload Distribution</h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">By task category</p>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center relative">
+<!-- SVG Donut Placeholder -->
+<div class="relative w-48 h-48">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background ring -->
+<circle class="text-surface-container-highest" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="12"></circle>
+<!-- Design (45%) -->
+<circle class="text-status-assigned transition-all duration-1000 ease-out hover:stroke-16 cursor-pointer" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="138.16" stroke-width="12"></circle>
+<!-- Development (35%) -->
+<circle class="text-status-production transition-all duration-1000 ease-out hover:stroke-16 cursor-pointer" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="163.28" stroke-dashoffset-start="251.2" stroke-width="12" style="transform: rotate(162deg); transform-origin: 50% 50%;"></circle>
+<!-- Review/QA (20%) -->
+<circle class="text-status-review transition-all duration-1000 ease-out hover:stroke-16 cursor-pointer" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="200.96" stroke-width="12" style="transform: rotate(288deg); transform-origin: 50% 50%;"></circle>
+</svg>
+<!-- Center Text -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-display-lg text-[32px] font-semibold text-text-primary leading-none">342</span>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase">Total Tasks</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="w-full mt-xl space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-sm bg-status-assigned"></div>
+<span class="font-body-md text-body-md text-text-primary">Design</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-text-secondary">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-sm bg-status-production"></div>
+<span class="font-body-md text-body-md text-text-primary">Development</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-text-secondary">35%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-sm bg-status-review"></div>
+<span class="font-body-md text-body-md text-text-primary">Review / QA</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-text-secondary">20%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

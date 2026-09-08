@@ -1,0 +1,179 @@
+<div class="flex flex-col w-full h-[calc(100vh-3.5rem)] overflow-hidden">
+<div class="flex flex-1 overflow-hidden">
+<!-- Left: Canvas Area -->
+<div class="flex-1 bg-surface-base relative flex flex-col overflow-hidden">
+<!-- Canvas Toolbar -->
+<div class="h-12 bg-surface flex items-center justify-between px-md shrink-0 shadow-sm z-10">
+<div class="flex items-center gap-md">
+<span class="font-headline-sm text-headline-sm text-text-primary">Sticker_V03.png</span>
+<div class="px-sm py-xs bg-surface-container-low text-text-secondary rounded text-mono-sm font-mono-sm">
+                        2400 x 2400 px
+                    </div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="flex bg-surface-container rounded overflow-hidden">
+<button class="px-md py-xs text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-colors text-label-caps font-label-caps">V1</button>
+<button class="px-md py-xs text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-colors text-label-caps font-label-caps">V2</button>
+<button class="px-md py-xs bg-primary text-on-primary text-label-caps font-label-caps">V3 [Active]</button>
+</div>
+<button class="p-sm text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors" title="Compare Versions">
+<span class="material-symbols-outlined text-[20px]">compare</span>
+</button>
+<div class="w-px h-6 bg-border-subtle mx-xs"></div>
+<button class="p-sm text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<span class="text-mono-sm font-mono-sm text-text-secondary min-w-[48px] text-center">100%</span>
+<button class="p-sm text-text-secondary hover:text-text-primary hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]">zoom_out</span>
+</button>
+</div>
+</div>
+<!-- Canvas Workspace -->
+<div class="flex-1 relative bg-surface-container-lowest overflow-hidden flex items-center justify-center p-xl cursor-crosshair group" id="canvas-area">
+<!-- Background Pattern (Grid) -->
+<svg class="absolute inset-0 w-full h-full text-surface-variant pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Artwork Container -->
+<div class="relative max-w-full max-h-full shadow-2xl shadow-black/50 transition-transform duration-300 ease-out" id="artwork-container">
+<img alt="Sticker V03" class="w-auto h-auto max-w-[800px] max-h-[80vh] object-contain block bg-surface-base rounded-lg" data-alt="A highly detailed, vibrant digital illustration of a cyberpunk character. The character has glowing neon accents, intricate mechanical parts, and is set against a dark, moody background. Premium minimalist aesthetic with precise line work. Soft, cinematic lighting highlights the metallic textures. High resolution, professional quality sticker design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClkoayDyVHb2NarHfd4iWGVv3v5dJpr0LDpHNLrqRNxFX1SV-sYN9VBO2X_0HKb8Ye_sudpmcGU6q__nDsA3PVhng6jZ8yAGJg1D7ljgtUEI7VCeBkvJddu0Ws_d1fLrql4lZE8QgbTy8aTjgx4iBRtyWWrsD6Vw9I4fuaMLSL_FupI7xVUZrdNLGUX2FKVvDcILVjndQFhHwTLKOnOVL0cXssnX6OwwFE9m5iBuH9zj1WJ-pM3AI"/>
+<!-- Feedback Pins Overlay -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Pin #01 -->
+<div class="absolute top-[30%] left-[45%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
+<button class="w-8 h-8 bg-status-assigned text-on-primary rounded-full shadow-lg flex items-center justify-center font-label-caps text-label-caps ring-4 ring-status-assigned/30 hover:ring-status-assigned/50 transition-all z-20 group relative" onclick="highlightThread('thread-1')">
+                                01
+                                <div class="absolute -top-1 -right-1 w-3 h-3 bg-status-revision rounded-full border-2 border-surface-base opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+</div>
+<!-- Pin #02 -->
+<div class="absolute top-[65%] left-[70%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
+<button class="w-8 h-8 bg-surface-interface text-text-primary rounded-full shadow-lg flex items-center justify-center font-label-caps text-label-caps hover:bg-surface-elevated transition-all z-10 border border-border-subtle" onclick="highlightThread('thread-2')">
+                                02
+                            </button>
+</div>
+</div>
+</div>
+<!-- Floating Action Bar (Canvas) -->
+<div class="absolute bottom-lg left-1/2 -translate-x-1/2 bg-surface-elevated/90 backdrop-blur-md rounded-full shadow-xl px-sm py-sm flex items-center gap-xs border border-border-subtle opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="p-xs text-text-primary bg-surface-container rounded-full hover:bg-surface-container-high transition-colors" title="Select">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</button>
+<button class="p-xs text-text-secondary hover:text-text-primary hover:bg-surface-container rounded-full transition-colors" title="Add Pin (C)">
+<span class="material-symbols-outlined text-[20px]">push_pin</span>
+</button>
+<button class="p-xs text-text-secondary hover:text-text-primary hover:bg-surface-container rounded-full transition-colors" title="Pan (Space)">
+<span class="material-symbols-outlined text-[20px]">pan_tool</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Discussion Panel -->
+<div class="w-[400px] bg-surface flex flex-col shadow-xl z-20 relative shrink-0">
+<!-- Panel Header -->
+<div class="h-12 border-b border-border-subtle flex items-center justify-between px-md shrink-0 bg-surface">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">forum</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Feedback</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-label-caps font-label-caps text-text-secondary ml-xs">2 Open</span>
+</div>
+<button class="px-md py-xs bg-status-approved text-surface-base rounded hover:bg-status-approved/90 transition-colors font-headline-sm text-[14px]">
+                    Approve Design
+                </button>
+</div>
+<!-- Thread List -->
+<div class="flex-1 overflow-y-auto p-md space-y-md bg-surface-base" id="threads-container">
+<!-- Thread 1 (Active/Unresolved) -->
+<div class="bg-surface-elevated rounded-lg shadow-sm border-l-4 border-l-status-assigned transition-all duration-200" id="thread-1">
+<div class="p-md">
+<div class="flex items-start justify-between mb-sm">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 bg-status-assigned text-on-primary rounded-full flex items-center justify-center text-[10px] font-bold">01</div>
+<div class="flex flex-col">
+<span class="text-body-md font-medium text-text-primary">Aki (Art Director)</span>
+<span class="text-mono-sm font-mono-sm text-text-secondary">2 hours ago</span>
+</div>
+</div>
+<button class="text-text-secondary hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                            Move this glowing element slightly left. It's competing too much with the character's eye line. Let's give it more breathing room.
+                        </p>
+</div>
+<!-- Reply Section -->
+<div class="bg-surface p-md rounded-b-lg mt-unit">
+<div class="flex items-start gap-sm mb-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container overflow-hidden shrink-0 mt-xs">
+<img class="w-full h-full object-cover" data-alt="A minimal avatar image of a designer, monochrome stylized portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn7gkNWo4kSQbbd-89BaIJgRKuAahWcBBXp8RUJin9CABMJJv6xCsTR5T3fCJALN6J42dEpBJ_IxTABLZELyS4t3n9MDR19xJ7owTPf-z-x7w7N_vPvKaMnztLZShHZnrHZ8YZ-QWJnehdO8WK1J0Wjn5NWAulhwRg27xAJTsIkrl15VfZiyHZHxCA6FOb_yIDF8pUwauqVP1jhokMu7xOvM3den6QKrDu7j43Wvcc7bl2Bg79P5Q"/>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-md p-sm text-body-md text-on-surface">
+                                On it. I'll push it left and tone down the glow intensity by 10%.
+                            </div>
+</div>
+<div class="flex items-center gap-sm mt-sm">
+<input class="flex-1 bg-surface-container text-body-md text-text-primary px-sm py-1.5 rounded outline-none focus:ring-1 focus:ring-primary placeholder:text-text-secondary" placeholder="Reply..." type="text"/>
+<button class="p-1.5 text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Thread 2 (Resolved) -->
+<div class="bg-surface rounded-lg opacity-60 hover:opacity-100 transition-opacity duration-200" id="thread-2">
+<div class="p-md">
+<div class="flex items-start justify-between mb-sm">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 bg-surface-container text-text-secondary rounded-full flex items-center justify-center text-[10px] font-bold">02</div>
+<div class="flex flex-col">
+<span class="text-body-md font-medium text-text-primary line-through">Color balance</span>
+<span class="text-mono-sm font-mono-sm text-status-completed flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Resolved
+                                    </span>
+</div>
+</div>
+</div>
+<p class="text-body-md text-text-secondary italic">
+                            Contrast looks good here now. Approved for this section.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Simple script to highlight threads when pins are clicked
+    function highlightThread(threadId) {
+        const threads = document.querySelectorAll('#threads-container > div');
+        threads.forEach(t => {
+            t.classList.remove('ring-2', 'ring-primary/50', 'bg-surface-elevated');
+            if(t.id === threadId) {
+                t.classList.add('ring-2', 'ring-primary/50');
+                t.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    }
+
+    // Zoom/Pan basics (mockup)
+    const container = document.getElementById('artwork-container');
+    let scale = 1;
+    
+    // Add simple mouse wheel zoom
+    const canvasArea = document.getElementById('canvas-area');
+    canvasArea.addEventListener('wheel', (e) => {
+        if(e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY * -0.01;
+            scale = Math.min(Math.max(0.5, scale + delta), 3);
+            container.style.transform = `scale(${scale})`;
+        }
+    });
+</script>
