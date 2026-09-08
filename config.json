@@ -1,5 +1,4 @@
 {
-  "password": "change-me-now",
-  "port": 3000,
+  "passwords": ["change-me-now"],
   "sessionTtlHours": 168
 }

@@ -30,12 +30,21 @@ the other build (`server.js` + `npm start`) — this folder is Vercel-only.
    Paste the output in as the value. Apply both variables to
    Production (and Preview, if you want preview deployments to work too).
 
+   **Want more than one valid password?** There's still no username —
+   just a set of passwords anyone can use to get in. Use
+   `DASHBOARD_PASSWORDS` (with an S) instead, comma-separated:
+
+   | Name | Value |
+   |---|---|
+   | `DASHBOARD_PASSWORDS` | `aki-2026,hana-2026,kenji-2026` |
+   | `SESSION_SECRET` | a random string — generate one above |
+
 5. Deploy. You'll land on `/`, which redirects to `/login`.
 
-If you skip step 4 and don't set `DASHBOARD_PASSWORD` / `SESSION_SECRET`,
+If you skip step 4 and don't set `DASHBOARD_PASSWORD`(S) / `SESSION_SECRET`,
 the app still runs — the password falls back to `change-me-now` and the
-session secret is derived from whatever password is set. It'll work, but
-change the password before sharing the link with anyone.
+session secret is derived from whatever password(s) are set. It'll work,
+but change the password before sharing the link with anyone.
 
 ## Why this needed restructuring (and what's different from the Node version)
 
@@ -75,10 +84,11 @@ have the Vercel CLI installed:
 vercel dev
 ```
 
-## Changing the password later
+## Changing the password(s) later
 
-Update the `DASHBOARD_PASSWORD` environment variable in Vercel's project
-settings, then redeploy (Vercel → Deployments → Redeploy). Because the
+Update the `DASHBOARD_PASSWORD` (or `DASHBOARD_PASSWORDS`) environment
+variable in Vercel's project settings, then redeploy (Vercel → Deployments
+→ Redeploy). Because the
 session-signing key is derived in part from the password hash, this
 automatically signs out everyone using the old password.
 

@@ -40,6 +40,23 @@ const CONFIG_FILE = path.join(process.cwd(), "config.json");
 
 const DEFAULT_PASSWORD = "change-me-now";
 
+// Accepts either a single password (old "password" field / DASHBOARD_PASSWORD
+// env var, for backwards compatibility) or a list of passwords ("passwords"
+// field / comma-separated DASHBOARD_PASSWORDS env var). Any one of them logs
+// the person in — still no username, just a set of valid passwords.
+function normalizePasswordList(raw) {
+  if (Array.isArray(raw)) {
+    return raw.map((p) => String(p).trim()).filter((p) => p.length > 0);
+  }
+  if (typeof raw === "string") {
+    return raw
+      .split(",")
+      .map((p) => p.trim())
+      .filter((p) => p.length > 0);
+  }
+  return [];
+}
+
 function loadConfig() {
   let fileConfig = {};
   try {
@@ -48,13 +65,27 @@ function loadConfig() {
     // config.json is optional on Vercel — env vars are the primary path.
   }
 
-  const password = process.env.DASHBOARD_PASSWORD || fileConfig.password || DEFAULT_PASSWORD;
+  let passwords = normalizePasswordList(process.env.DASHBOARD_PASSWORDS);
+  if (passwords.length === 0 && process.env.DASHBOARD_PASSWORD) {
+    passwords = [process.env.DASHBOARD_PASSWORD];
+  }
+  if (passwords.length === 0) {
+    passwords = normalizePasswordList(fileConfig.passwords);
+  }
+  if (passwords.length === 0 && fileConfig.password) {
+    passwords = [fileConfig.password];
+  }
+  if (passwords.length === 0) {
+    passwords = [DEFAULT_PASSWORD];
+  }
+  passwords = Array.from(new Set(passwords));
+
   const sessionTtlHours = parseInt(
     process.env.SESSION_TTL_HOURS || fileConfig.sessionTtlHours || "168",
     10
   );
 
-  return { password, sessionTtlHours };
+  return { passwords, sessionTtlHours };
 }
 
 const CONFIG = loadConfig();
@@ -63,27 +94,36 @@ const CONFIG = loadConfig();
 // Password hashing + session secret
 // ---------------------------------------------------------------------------
 
-const PASSWORD_SALT = crypto.randomBytes(16);
-const PASSWORD_HASH = crypto.scryptSync(CONFIG.password, PASSWORD_SALT, 64);
+// Each password gets its own random salt + scrypt hash, computed once per
+// cold start. Logging in checks the submitted password against every entry.
+const PASSWORD_ENTRIES = CONFIG.passwords.map((pw) => {
+  const salt = crypto.randomBytes(16);
+  return { salt, hash: crypto.scryptSync(pw, salt, 64) };
+});
+
+const COMBINED_PASSWORD_HASH = crypto
+  .createHash("sha256")
+  .update(Buffer.concat(PASSWORD_ENTRIES.map((e) => e.hash)))
+  .digest("hex");
 
 function resolveSessionSecret() {
   if (process.env.SESSION_SECRET && process.env.SESSION_SECRET.length >= 16) {
     return process.env.SESSION_SECRET;
   }
-  // No SESSION_SECRET set: derive a stable one from the password so
+  // No SESSION_SECRET set: derive a stable one from the password list so
   // sessions still work consistently across cold starts and instances.
   // Setting a real SESSION_SECRET env var is stronger — see README.md.
-  return crypto.createHash("sha256").update("somn-studio-fallback:" + CONFIG.password).digest("hex");
+  return crypto.createHash("sha256").update("somn-studio-fallback:" + COMBINED_PASSWORD_HASH).digest("hex");
 }
 
 const SESSION_SECRET = resolveSessionSecret();
 
 // Signing key derives from BOTH the session secret and the current password
-// hash, so changing the password invalidates every previously issued
+// hashes, so changing the password list invalidates every previously issued
 // session automatically (takes effect on the next cold start).
 const SIGNING_KEY = crypto
   .createHmac("sha256", SESSION_SECRET)
-  .update(PASSWORD_HASH)
+  .update(COMBINED_PASSWORD_HASH)
   .digest();
 
 const SESSION_COOKIE_NAME = "somn_session";
@@ -142,8 +182,15 @@ function verifySessionToken(token) {
 
 function verifyPassword(candidate) {
   if (typeof candidate !== "string" || candidate.length === 0) return false;
-  const candidateHash = crypto.scryptSync(candidate, PASSWORD_SALT, 64);
-  return crypto.timingSafeEqual(candidateHash, PASSWORD_HASH);
+  // Check against every configured password. Intentionally does not
+  // short-circuit on the first mismatch, so response time doesn't hint at
+  // how many (or which) passwords are configured.
+  let matched = false;
+  for (const entry of PASSWORD_ENTRIES) {
+    const candidateHash = crypto.scryptSync(candidate, entry.salt, 64);
+    if (crypto.timingSafeEqual(candidateHash, entry.hash)) matched = true;
+  }
+  return matched;
 }
 
 // ---------------------------------------------------------------------------
